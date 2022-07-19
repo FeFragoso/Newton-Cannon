@@ -1,49 +1,76 @@
-body {
-    min-height: 95vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #000;
+* {
     padding: 0;
     margin: 0;
 }
 
+body {
+    max-height: 95vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #262626;
+}
+
+h1 {
+    margin-top: 2vh;
+    margin-bottom: -7.5vh;
+    color: #fff;
+    font-family: cursive;
+    font-size: 5vh;
+}
+
+#tela {
+    background-color: #000;
+    height: 50vh;
+    width: 100vh;
+    margin-top: 10vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid 5px #fff;
+    border-radius: 5px;
+}
+
 #canhao {
-    width: 3%;
-    margin-bottom: -0.75%;
-    z-index: 1;
+    z-index: 3;
+    width: 4vh;
+    position: absolute;
+    bottom: 67.5%;
 }
 
 #terra {
-    width: 15%;
-    
+    z-index: 1;
+    width: 20vh;
+    position: absolute;
 }
 
 #bola {
-    width: 0.75%;
-    margin-bottom: -1.75%;
+    z-index: 2;
+    width: 1vh;
+    position: absolute;
+    bottom: 70%;
 }
 
-#estrelas {
-    position: fixed;
-    z-index: -5;
 
-    top: 50%;
-    left: 50%;
-    height: 3px;
-    width: 3px;
-    background-color: rgb(255, 225, 125);
-    border-radius: 50%;
-    box-shadow: -24vw -44vh 2px 2px #fff,38vw -4vh 0px 0px #fff,-20vw -48vh 1px 2px #fff,-39vw 38vh 3px 1px #fff,-42vw -11vh 0px 3px #fff,12vw 15vh 3px 3px #fff,42vw 6vh 3px 2px #fff,-8vw 9vh 0px 2px #fff,34vw -38vh 1px 0px #fff,-17vw 45vh 3px 1px #fff,22vw -36vh 3px 2px #fff,-42vw 1vh 1px 0px #fff, -17vw 29vh 3px 3px #fff,-9vw -37vh 3px 0px #fff,33vw 5vh 0px 1px #fff,-30vw 43vh 2px 0px #fff,37vw -5vh 3px 1px #fff,-27vw -38vh 0px 1px #fff,21vw 46vh 3px 2px #fff,28vw -44vh 0px 2px #fff,24vw 18vh 3px 3px #fff,38vw 22vh 0px 0px #fff,-44vw 32vh 2px 3px #fff,45vw -45vh 1px 0px #fff,-17vw 0vh 3px 1px #fff,-41vw 42vh 0px 0px #fff,-42vw -35vh 1px 0px #fff,-48vw 41vh 0px 1px #fff,-28vw 31vh 3px 1px #fff,18vw 24vh 2px 0px #fff,-31vw -22vh 1px 2px #fff,-30vw -21vh 2px 3px #fff,-28vw 24vh 2px 2px #fff,43vw 48vh 3px 1px #fff,8vw -34vh 0px 1px #fff,-16vw 8vh 0px 2px #fff,19vw 17vh 1px 0px #fff,-4vw -15vh 1px 3px #fff,41vw -33vh 0px 0px #fff,-43vw 23vh 2px 2px #fff,2vw -11vh 0px 0px #fff,-11vw 47vh 3px 2px #fff,-26vw 50vh 3px 1px #fff,30vw -13vh 1px 2px #fff,4vw -11vh 1px 0px #fff,41vw -22vh 1px 1px #fff,-2vw 28vh 0px 1px #fff,-1vw -43vh 3px 0px #fff,28vw -45vh 1px 3px #fff,-6vw -47vh 1px 1px #fff,10vw 38vh 3px 0px #fff,-20vw -14vh 3px 0px #fff,2vw -37vh 1px 3px #fff,47vw 45vh 3px 0px #fff,-5vw 44vh 3px 3px #fff,-39vw 32vh 2px 1px #fff,16vw -41vh 0px 1px #fff,14vw -25vh 3px 0px #fff,-46vw 34vh 3px 1px #fff,42vw 48vh 1px 2px #fff,48vw -24vh 1px 0px #fff,-9vw -24vh 0px 1px #fff,8vw -2vh 1px 0px #fff,50vw -31vh 0px 2px #fff,-47vw -46vh 1px 3px #fff,17vw -38vh 0px 0px #fff,5vw -42vh 1px 0px #fff,-42vw -6vh 2px 1px #fff,42vw -36vh 0px 2px #fff,31vw -8vh 3px 2px #fff,-8vw -5vh 3px 1px #fff,8vw 20vh 3px 0px #fff,-37vw 37vh 1px 3px #fff,31vw 31vh 3px 2px #fff,-6vw 21vh 3px 1px #fff,8vw 31vh 3px 1px #fff,4vw 44vh 2px 3px #fff,-24vw 22vh 3px 1px #fff,18vw 8vh 0px 3px #fff,50vw -25vh 3px 1px #fff,-35vw -13vh 3px 1px #fff,-6vw -43vh 0px 1px #fff,9vw -26vh 0px 2px #fff,-7vw 15vh 1px 2px #fff,-32vw -16vh 1px 3px #fff,21vw -35vh 1px 1px #fff,8vw -22vh 2px 3px #fff,39vw -45vh 0px 1px #fff,33vw -4vh 3px 3px #fff,-31vw -42vh 3px 0px #fff,29vw 24vh 0px 3px #fff,-49vw -18vh 1px 1px #fff,-34vw -6vh 3px 2px #fff,-23vw -37vh 3px 1px #fff,24vw 42vh 1px 0px #fff,7vw -46vh 0px 0px #fff,43vw 33vh 1px 1px #fff,-35vw 21vh 3px 2px #fff,14vw 12vh 0px 3px #fff,-41vw 50vh 3px 1px #fff,-43vw -29vh 3px 2px #fff,38vw 44vh 1px 3px #fff,23vw 48vh 1px 1px #fff,18vw 32vh 2px 3px #fff,39vw 40vh 2px 0px #fff,2vw -24vh 2px 1px #fff,21vw -3vh 1px 0px #fff,48vw 3vh 3px 0px #fff,21vw -6vh 3px 1px #fff,-36vw 3vh 1px 2px #fff,-34vw -13vh 2px 3px #fff,-46vw -3vh 3px 3px #fff;
-    animation: zoom 60s alternate infinite;
+
+
+
+
+
+/* FUNDO DA TELA */
+#estrelas {
+    box-shadow: -96vh 20vh 3px 0px #fff,-73vh 44vh 3px 1px #fff,82vh -21vh 2px 2px #fff,63vh 39vh 1px 0px #fff,-75vh -37vh 2px 0px #fff,-55vh 44vh 1px 0px #fff,-54vh -45vh 2px 1px #fff,87vh -40vh 0px 2px #fff,-41vh 23vh 1px 3px #fff,4vh 21vh 1px 2px #fff,55vh 34vh 2px 2px #fff,25vh -50vh 1px 3px #fff,99vh 40vh 1px 0px #fff,-68vh -5vh 0px 2px #fff,-28vh 3vh 2px 1px #fff,99vh -27vh 2px 3px #fff,-43vh 49vh 1px 2px #fff,-73vh -1vh 0px 0px #fff,21vh -10vh 1px 1px #fff,69vh 49vh 3px 2px #fff,16vh 39vh 2px 1px #fff,-22vh -48vh 1px 3px #fff,42vh -49vh 1px 2px #fff,-61vh 27vh 3px 3px #fff,-46vh 7vh 3px 2px #fff,-23vh -27vh 0px 2px #fff,29vh -15vh 2px 1px #fff,63vh -23vh 3px 1px #fff,4vh -22vh 0px 0px #fff,-45vh 10vh 1px 2px #fff,88vh -32vh 0px 2px #fff,-32vh 10vh 0px 1px #fff,18vh -29vh 3px 1px #fff,-69vh -36vh 3px 1px #fff,12vh -48vh 0px 3px #fff,-30vh -21vh 3px 3px #fff,-87vh -6vh 3px 3px #fff,53vh 17vh 1px 3px #fff,-14vh -15vh 3px 1px #fff,21vh 50vh 3px 1px #fff,27vh 3vh 0px 0px #fff,63vh 0vh 3px 0px #fff,-10vh 22vh 1px 0px #fff,36vh 0vh 3px 1px #fff,36vh 47vh 3px 0px #fff,-59vh 1vh 1px 2px #fff,75vh -26vh 2px 3px #fff,11vh 13vh 3px 2px #fff,85vh -24vh 0px 3px #fff,-95vh -29vh 3px 2px #fff,-13vh -7vh 0px 3px #fff,-87vh 34vh 3px 0px #fff,25vh -21vh 1px 3px #fff,59vh 37vh 0px 1px #fff,47vh -34vh 3px 1px #fff,-25vh -25vh 1px 3px #fff,-13vh 0vh 1px 1px #fff,-60vh -13vh 3px 3px #fff,-19vh 21vh 0px 3px #fff,-78vh 8vh 1px 2px #fff,10vh -14vh 0px 2px #fff,-16vh -48vh 3px 3px #fff,44vh 11vh 2px 2px #fff,83vh -29vh 3px 3px #fff,-45vh 34vh 0px 0px #fff,-89vh -9vh 2px 3px #fff,29vh -34vh 0px 0px #fff,-75vh 21vh 0px 1px #fff,-57vh -7vh 1px 0px #fff,-34vh -12vh 1px 0px #fff,-89vh 42vh 3px 0px #fff,-56vh 17vh 1px 0px #fff,-84vh -20vh 1px 2px #fff,-87vh -26vh 0px 1px #fff,-7vh 45vh 1px 1px #fff,-30vh -45vh 3px 2px #fff,48vh -6vh 2px 1px #fff,28vh 45vh 2px 0px #fff,34vh -46vh 3px 1px #fff,78vh 12vh 0px 2px #fff,29vh -21vh 2px 1px #fff,-84vh -26vh 0px 1px #fff,-37vh -34vh 0px 2px #fff,89vh -35vh 1px 1px #fff,-16vh 26vh 3px 0px #fff,20vh 26vh 0px 0px #fff,-34vh 3vh 3px 1px #fff,5vh 26vh 1px 3px #fff,-32vh -44vh 1px 3px #fff,-18vh 19vh 2px 3px #fff,-15vh -12vh 0px 1px #fff,-57vh 30vh 0px 2px #fff,-43vh 34vh 3px 0px #fff,23vh 29vh 0px 1px #fff,-63vh -15vh 2px 2px #fff,-53vh -33vh 0px 0px #fff,21vh 22vh 1px 1px #fff,-82vh -39vh 3px 2px #fff,60vh -11vh 3px 0px #fff,26vh -2vh 2px 3px #fff;
+    animation: zoom 10s alternate infinite;
 }
 
 @keyframes zoom {
     0%{
-        transform: scale(1);
+        transform: scale(0.48);
     }
     100%{
-        transform: scale(1.3);
+        transform: scale(0.5);
     }
 }
