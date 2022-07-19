@@ -5,15 +5,24 @@ body {
     align-items: center;
     justify-content: center;
     background-color: #000;
+    padding: 0;
+    margin: 0;
 }
 
 #canhao {
     width: 3%;
-    margin-bottom: -10px;
+    margin-bottom: -0.75%;
+    z-index: 1;
 }
 
 #terra {
     width: 15%;
+    
+}
+
+#bola {
+    width: 0.75%;
+    margin-bottom: -1.75%;
 }
 
 #estrelas {
@@ -35,6 +44,6 @@ body {
         transform: scale(1);
     }
     100%{
-        transform: scale(1.5);
+        transform: scale(1.3);
     }
 }
