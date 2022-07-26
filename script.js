@@ -1,10 +1,33 @@
-function randomNumber(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min
+function load(){
+    bola = document.getElementById('bola')
+    
+    // X
+    posicaoX = 508
+    velocidadeX = 1
+    aceleracaoX = 0
+    // Y
+    posicaoY = 382.75
+    velocidadeY = 0
+    aceleracaoY = 0.01
+
+    movimento()
 }
 
-const STAR_COUNT = 100
-let result = ""
-for(let i = 0; i < STAR_COUNT; i++){
-    result += `${randomNumber(-100, 100)}vh ${randomNumber(-50, 50)}vh ${randomNumber(0, 3)}px ${randomNumber(0, 3)}px #fff,`
+function movimento(){
+
+    if (posicaoX < 987.5 && posicaoY < 587.5) {
+        // X
+        velocidadeX = velocidadeX + aceleracaoX
+        posicaoX = posicaoX + velocidadeX
+        bola.style.left = posicaoX + 'px'
+    
+        // Y
+        velocidadeY = velocidadeY + aceleracaoY
+        posicaoY = posicaoY + velocidadeY
+        bola.style.bottom = posicaoY + 'px'
+    
+        tempo = requestAnimationFrame(movimento)
+    }
 }
-console.log(result.substring(0, result.length - 1))
+
+window.addEventListener("load", load)
