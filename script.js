@@ -1,74 +1,42 @@
-var X
-var Y
-var G = 0.0000000000667
-var M = 1000000000000
-var m = 1
-var dX
-var dY
+var bola = document.getElementById('bola')
 
-function load(){
-    
-    bola = document.getElementById('bola')
-    gravidade = document.getElementById('terra')
+var x0 = 509
+var xf
+var y0 = 382.5
+var yf
 
-    // X
-    X = 508
-    velocidadeX = 0.1
-    dX = Math.abs(X - 501)
-    aceleracaoX = -1*(G*M*m/(dX*dX))
-    // Y
-    Y = 382.75
-    velocidadeY = 0
-    dY = Math.abs(Y - 301)
-    aceleracaoY = -1*(G*M*m/(dY*dY))
-    
-    movimento()
-}
+var gravidade = 5
+var velocidade = 1
 
-function movimento(){
+function movimento() {
+    if (x0>10 && x0<991 && y0>10 && y0<591) {
+        tempoX = Math.sqrt((2*y0)/gravidade)
+        tempoY = Math.sqrt((2*x0)/gravidade)
 
-    if (X < 987.5 && X > 0 && Y > 0 && Y < 587.5) {
-        // X
-        velocidadeX = velocidadeX + aceleracaoX
-        X = X + velocidadeX
-        bola.style.left = X + 'px'
-    
-        // Y
-        velocidadeY = velocidadeY + aceleracaoY
-        Y = Y + velocidadeY
-        bola.style.bottom = Y + 'px'
-    
-        tempo = requestAnimationFrame(movimento)
+        xf = x0+(velocidade*tempoX)
+        yf = y0-(velocidade*tempoY)
+
+        bola.style.left = xf + 'px'
+        bola.style.bottom = yf + 'px'
+
+        x0 = xf
+        y0 = yf
+
+        console.log(x0, y0)
+        
+        loop = requestAnimationFrame(movimento)
     }
 }
 
-const posicaoX = ()=> {
-    const { left } = getComputedStyle(bola)
-    
-    const valor = +left.replace('px', '')
-    
-    return valor
-}
+function load() {
+    x0 = 509
+    y0 = 382.5
 
-const posicaoY = ()=> {
-    const { bottom } = getComputedStyle(bola)
-    
-    const valor = +bottom.replace('px', '')
-    
-    return valor
+    movimento()
 }
 
 window.addEventListener("click", load)
 
 
-/*
-x = 0 => gravidade = 0
-x = 430 => gravidade = aceleracaoX
-x = 570 => gravidade = aceleracaoX
-x = 1000 => gravidade = 0
-
-y = 0 => gravidade = 0
-y = 230 => gravidade = aceleracaoY
-y = 370 => gravidade = aceleracaoY
-y = 600 => gravidade = 0
-*/
+// 1Q { x = 500.5 - 1001 | y = 300.5 - 601 }
+// 2Q { x = 500.5 - 1001 | y = 0 - 300.5 }

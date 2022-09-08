@@ -49,7 +49,10 @@ h1 {
 #bola {
     width: 10px;
 
-    z-index: 4;
+    left: 509px;
+    bottom: 382.5px;
+
+    z-index: 1;
     position: absolute;
 
     border-radius: 50%;
