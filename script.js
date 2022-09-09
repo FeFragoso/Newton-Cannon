@@ -1,14 +1,15 @@
 var bola = document.getElementById('bola')
-
-var velocidade = 1
-var gravidade = 0.5
-
+var velocidade = 10
+var gravidade = 10
+var loop
 var x = 509
-var y = 382.5
+var y = 383
 
 function movimento() {
-    if (x>10 && x<991 && y>10 && y<591) {
+    cancelAnimationFrame(loop)
 
+    if (x>10 && x<991 && y>10 && y<591) {
+        
         if (x>500.5 && y>=300.5) {
             x += velocidade
             y += (gravidade*-1)
@@ -25,16 +26,20 @@ function movimento() {
             x += velocidade
             y += gravidade
         }
-
+        
         bola.style.left = x + 'px'
         bola.style.bottom = y + 'px'
-        
-        loop = requestAnimationFrame(movimento)
+
+        loop = requestAnimationFrame(movimento) 
     }
 }
 
-function load() {
-    movimento()
-}
+function reset() {
+    cancelAnimationFrame(loop)
 
-window.addEventListener("click", load)
+    x = 509
+    y = 383
+
+    bola.style.left = '509px'
+    bola.style.bottom = '383px'
+}
