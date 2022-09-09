@@ -1,6 +1,6 @@
 var bola = document.getElementById('bola')
-var velocidade = 10
-var gravidade = 10
+var velocidade = 3
+var gravidade = 1
 var loop
 var x = 509
 var y = 383
