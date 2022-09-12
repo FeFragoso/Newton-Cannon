@@ -1,6 +1,7 @@
 var bola = document.getElementById('bola')
 var angulo = 84
 var radiano
+var contadorRaio = 0
 var raio
 var loop
 var x = 509
@@ -11,7 +12,7 @@ function calculo() {
         x -= 501
         y -= 301
 
-        raio = Math.sqrt((x**2)+(y**2))
+        raio = contadorRaio+(Math.sqrt((x**2)+(y**2)))
 
         radiano = (angulo*Math.PI)/180
 
@@ -20,6 +21,7 @@ function calculo() {
     }
 
     angulo--
+    contadorRaio += 0.0001
 
     return x, y
 }
@@ -38,6 +40,7 @@ function disparo() {
 function reset() {
     cancelAnimationFrame(loop)
 
+    contadorRaio = 0
     angulo = 84
 
     x = 509

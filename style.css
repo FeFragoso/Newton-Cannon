@@ -73,6 +73,37 @@ h1 {
     box-shadow: 0 0 15px 2.5px yellow;
 }
 
+#btns {
+    width: 50%;
+
+    margin-bottom: 2rem;
+
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.btn {
+    width: 6rem;
+    height: 3rem;
+
+    font-weight: bold;
+
+    color: white;
+    background-color: #262626;
+
+    border: none;
+    border-radius: 15px;
+    box-shadow: 5px 4px 4px rgba(0, 0, 0, 0.534);
+
+    transition-duration: 0.4s;
+}
+
+.btn:hover {
+    color: black;
+    background-color: rgba(255, 255, 255, 0.822);
+}
+
 /* FUNDO ESTRELADO DA TELA */
 
 #estrelasFundoDiv {
@@ -108,5 +139,29 @@ h1 {
     }
     100%{
         transform: scale(0.5);
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 420px) {
+    body {
+        transform: scale(0.7);
+    }
+
+    #quadro {
+        transform: scale(0.7);
+    }
+
+    #terra {
+        transform: scale(0.7);
+    }
+
+    #canhao {
+        transform: scale(0.7);
+    }
+
+    #bola {
+        transform: scale(0.7);
     }
 }
